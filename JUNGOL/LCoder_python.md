@@ -39,3 +39,9 @@
   - 공백 있는 문자열을 하나씩 list에 넣기 : `str.split()`
   - list를 역순으로 출력하기 : `reversed(list)`, `list.reverse()`, `list[::-1]`
   - [e, e, e, ...] : `[element] * num`
+- 06.21(817 ~ 831)
+  - Vscode를 활용한 디버그
+    - Run > start Debugging
+    - break point 설정 > 재생 버튼
+    - break point에서 계산된 변수 값 등을 확인해볼 수 있다.
+    - 이외에 직접 윗버튼과 아래버튼을 클릭하여 확인하는 것도 가능하다. 
