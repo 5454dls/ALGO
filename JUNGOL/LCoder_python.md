@@ -62,9 +62,9 @@
     * 숫자 : `isdigit()`
     * 대문자 : `isupper()`
     * 소문자 : `islower()`
-
 * 0630(901 ~ 919)
   * sort 기능
     * `reversed(l)` : 복사 후 정렬 > 정렬된 객체 반환
     * `l.reverse()` : 원본 정렬 > None 반환
     * `l.sort(reverse, key)` : `reverse()`와 같은 기능을 하지만, 오름차순/내림차순,  정렬기준 설정 등의 기능이 있음
+* 0701(921 ~ 940)
