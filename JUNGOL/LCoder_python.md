@@ -68,3 +68,14 @@
     * `l.reverse()` : 원본 정렬 > None 반환
     * `l.sort(reverse, key)` : `reverse()`와 같은 기능을 하지만, 오름차순/내림차순,  정렬기준 설정 등의 기능이 있음
 * 0701(921 ~ 940)
+* 0705(941 ~ 953)
+  * set 관련 메서드
+    * `|` : 합집합
+    * `&` : 교집합
+    * `-` : 차집합
+  * dict 관련 메서드
+    * `in` : 기본적으로 key로 순회
+    * `items()` : key, value
+    * `keys()` : key
+    * `values()` : value
+    * `get(key, default)` : 특정 key에 맞는 value, 없을 시 default를 반환
