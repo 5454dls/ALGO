@@ -102,3 +102,59 @@
       l = list(map(int, input().split()))
       bubble(l)
       ```
+
+- 0708(401 ~ 412)
+
+  - n 개중 k를 고르는 조합, 중복조합, 순열, 중복순열
+
+  - 조합
+
+    - ```python
+      def com(level, s):
+          if level == k:
+              print(l)
+          else:
+              for i in range(s, n - (k + level) + 1):
+                  l[level] = arr[i]
+                  com(level + 1, i + 1)
+      ```
+
+  - 중복조합
+
+    - ```python
+      def Hcom(level, s):
+          if level == k:
+              print(l)
+          else:
+              for i in range(s, n):
+                  l[level] = arr[i]
+                  com(level + 1, i)
+      ```
+
+  - 순열
+
+    - ```python
+      def per(level):
+          if level == k:
+              print(l)
+          else:
+              for i in range(n):
+                  if not visited[i]:
+                  	l[level] = arr[i]
+                  	visited[i] = 1
+                      per(level + 1)
+                      visited[i] = 0
+      ```
+
+  - 중복순열
+
+    - ```python
+      def per(level):
+          if level == k:
+              print(l)
+          else:
+              for i in range(n):
+                  l[level] = arr[i]
+                  per(level + 1)
+      ```
+
