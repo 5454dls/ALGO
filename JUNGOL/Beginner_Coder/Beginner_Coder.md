@@ -21,4 +21,69 @@
 
 # 3. 피드백
 
-- 06.03(1291, 1303, 1304, 1307, 1314, 1338, 1339, 1341, 1856, 2046)
+- 07.20(1291, 1303, 1304, 1307, 1314, 1338, 1339, 1341, 1856, 2046)
+
+- 07.21(1692, 1430, 1071, 1402, 2809, 1658, 1002)
+
+  - 약수구하기
+
+    - N = A * B이므로 약수는 짝을 이루어 나온다. 따라서 아래와 같이 시간복잡도를 줄일 수 있다.
+
+      ```python
+      n = int(input())
+      
+      divisorsList = []
+      
+      for i in range(1, int(n**(1/2)) + 1):
+          if (n % i == 0):
+              divisorsList.append(i) 
+              if ( (i**2) != n) : 
+                  divisorsList.append(n // i)
+      
+      divisorsList.sort()
+      
+      for r in divisorsList:
+          print(r, end = " ")
+      ```
+
+    - A, B ,C의 최대공약수를 구할 때, A와 B의 최대공약수가 D라면, C와 D의 최대공약수가 A, B, C의 최대공약수가 된다.
+
+      ```python
+      def MIN(n1, n2):
+          n = 1
+      
+          for i in range(int(min(n1, n2)), 1, -1):
+              if (n1 % i == 0) and (n2 % i == 0):
+                  n = i
+                  break
+          nd.pop()
+          nd.pop()
+          nd.append(n)
+      
+      def MAX(n1, n2):
+          N = n1 * n2
+      
+          for i in range(int(min(n1, n2)), 1, -1):
+              if (n1 % i == 0) and (n2 % i == 0):
+                  N = (n1 * n2) // i
+                  break
+          Nd.pop()
+          Nd.pop()
+          Nd.append(N)
+      
+      num = int(input())
+      data = list(map(int, input().split()))
+      data.sort()
+      
+      nd = data[:]
+      Nd = data[:]
+      i = num - 1
+      while len(nd) >= 2:
+          MIN(nd[i], nd[i - 1])
+          MAX(Nd[i], Nd[i - 1])
+          i -= 1
+      
+      print(nd[0], Nd[0])
+      ```
+
+      
